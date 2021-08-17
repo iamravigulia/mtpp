@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-Route::get('mtpp/test', 'EdgeWizz\Mtpp\Controllers\MtppController@test')->name('test');
+// Route::get('mtpp/test', 'EdgeWizz\Mtpp\Controllers\MtppController@test')->name('test');
 
 Route::post('fmt/mtpp/store', 'EdgeWizz\Mtpp\Controllers\MtppController@store')->name('fmt.mtpp.store');
 
