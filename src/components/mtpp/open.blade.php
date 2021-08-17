@@ -53,7 +53,7 @@
         <div class="fmt_headline">Add a Match the pairs with picture Question</div>
         <div>
             <label class="fmt_label" for="">Question</label>
-            <textarea class="fmt_input w-100" type="text" name="question" placeholder="Question" ></textarea>
+            <textarea class="fmt_input w-100" type="text" name="question" placeholder="Question" required></textarea>
         </div>
         <div class="my-2" style="margin: 20px 0;">
             <label class="bloc" for="">Difficulty Level</label>
@@ -72,11 +72,11 @@
         <div class="flex flex-items">
             <div>
                 <label class="fmt_label" for="">Image {{$col}}</label>
-                <input class="fmt_input" type="file"  name="media_{{$col}}" accept="image/*" placeholder="Media" >
+                <input class="fmt_input" type="file"  name="media_{{$col}}" accept="image/*" placeholder="Media" @if ($col == 1 or $col == 2) required @endif>
             </div>
             <div style="margin-left:20px;">
                 <label class="fmt_label" for="">Text {{$col}}</label>
-                <input class="fmt_input" type="text" name="text_{{$col}}" placeholder="Text" >
+                <input class="fmt_input" type="text" name="text_{{$col}}" placeholder="Text" @if ($col == 1 or $col == 2) required @endif>
             </div>
         </div>
         @endforeach
